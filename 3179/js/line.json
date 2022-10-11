@@ -1,0 +1,58 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 500,
+  "title": {
+    "text": "TOP 5 university",
+    "frame": "bounds"
+  },
+  "data": {
+    "values": [
+      {"school": "Harvard University", "year": 2012, "rank": 1},
+      {"school": "Massachusetts Institute of Technology", "year": 2012, "rank": 2},
+      {"school": "Stanford University", "year": 2012, "rank": 3},
+      {"school": "University of Cambridge", "year": 2012, "rank": 4},
+      {"school": "University of Oxford", "year": 2012, "rank": 7},
+      {"school": "Harvard University", "year": 2013, "rank": 1},
+      {"school": "Massachusetts Institute of Technology", "year": 2013, "rank": 4},
+      {"school": "Stanford University", "year": 2013, "rank": 2},
+      {"school": "University of Cambridge", "year": 2013, "rank": 5},
+      {"school": "University of Oxford", "year": 2013, "rank": 3},
+      {"school": "Harvard University", "year": 2014, "rank": 1},
+      {"school": "Massachusetts Institute of Technology", "year": 2014, "rank": 3},
+      {"school": "Stanford University", "year": 2014, "rank": 2},
+      {"school": "University of Cambridge", "year": 2014, "rank": 4},
+      {"school": "University of Oxford", "year": 2014, "rank": 5},
+      {"school": "Harvard University", "year": 2015, "rank": 1},
+      {"school": "Massachusetts Institute of Technology", "year": 2015, "rank": 3},
+      {"school": "Stanford University", "year": 2015, "rank": 2},
+      {"school": "University of Cambridge", "year": 2015, "rank": 4},
+      {"school": "University of Oxford", "year": 2015, "rank": 5}
+    ]
+  },
+  "transform": [{
+    "sort": [
+      {"field": "rank", "order": "ascending"}
+    ],
+    "window": [{
+      "op": "rank",
+      "as": "rank"
+    }],
+    "groupby": ["year"]
+  }],
+  "mark": {"type": "line", "orient": "vertical"},
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal"},
+    "y": {"field": "rank", "type": "ordinal"},
+    "color": {
+      "field": "school", "type": "nominal",
+      "legend": {"orient": "top", "titleOrient": "left"},
+      "scale": {
+        "domain": ["Harvard University", "Massachusetts Institute of Technology", "Stanford University", "University of Cambridge", "University of Oxford"],
+        "range": ["black", "green", "blue", "#FF9900", "#e41a1c"]
+      }
+    }
+  },
+  "config": {
+    "background":"#F3FAF9"}
+}

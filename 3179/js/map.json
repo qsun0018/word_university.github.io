@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "TOP 100 universities worldwide distribution during 2012-2015",
+    "width": 800,
+    "height": 500,
+    "projection": {
+        "type": "equirectangular"
+    },
+    "params": [{
+            "name": "Year_selection",
+            "value": 2012,
+            "bind": {
+                "input": "range",
+                "min": 2012,
+                "max": 2015,
+                "step": 1,
+                "name": "Year:  "
+            }
+        }
+    ],
+    
+    "data": {
+      "url": "https://raw.githubusercontent.com/qsun0018/3179/main/country%20and%20year.csv"
+    },
+    "transform": [
+      {
+        "lookup": "Country",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/qsun0018/3179/main/ne_110m_admin_0_countries.json",
+            "format": {
+              "type": "topojson", 
+              "feature": "ne_110m_admin_0_countries"
+            }
+          },
+          "key": "properties.NAME"
+        },
+        "as": "geo"
+      },
+      {"filter": "datum.year == Year_selection"}
+    ],
+    "mark": { "type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5 },
+    "encoding": {
+        "shape": { "field": "geo", "type": "geojson" },
+        "color": {
+            "field": "Number",
+            "type": "quantitative",
+            "scale": {
+                "domain": [
+                    0,
+                    3,
+                    5,
+                    50
+                ],
+                "scheme": "reds"
+            },
+            "legend": { "format": ".2s" }
+        },
+        "tooltip": [
+            {"field": "Country", "type": "nominal", "title": "Country"},
+            {
+              "field": "Number",
+              "type": "quantitative",
+              "title": "Median Price",
+              "format": ","
+          },
+            { "field": "year", "type": "quantitative", "title": "Year" }
+        ]
+    },
+    "config": {
+      "background":"#F3FAF9"}
+}

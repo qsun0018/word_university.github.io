@@ -1,0 +1,28 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 500,
+    "title": "number of students at the TOP 5 university",
+    "data": {
+      "values": [
+        {"school": "Harvard University", "number": 20152}, {"school": "Massachusetts Institute of Technology", "number": 11074},
+        {"school": "Stanford University", "number": 15596}, {"school": "University of Cambridge", "number": 18812}, 
+        {"school": "University of Oxford", "number": 19919}
+      ]
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {"field": "school", "type": "nominal", "axis": {"labelAngle": 0}},
+      "y": {"field": "number", "type": "quantitative"},
+      "color": {
+        "field": "school",
+        "legend": {"orient": "top", "titleOrient": "left"},
+        "scale": {
+            "domain": ["Harvard University", "Massachusetts Institute of Technology", "Stanford University", "University of Cambridge", "University of Oxford"],
+            "range": ["black", "green", "blue", "#FF9900", "#e41a1c"]
+        }
+    }
+  },
+  "config": {
+    "background":"#F3FAF9"}
+}

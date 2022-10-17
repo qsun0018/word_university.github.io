@@ -7,8 +7,8 @@ body {
     width: 110vw;
 }
 #vis1 {
-	left: 200px;
-	right: 200px;
+	left: 100px;
+	right: 100px;
 	/*height: 1000px;
 	width: 800px;*/
 }
@@ -19,8 +19,8 @@ body {
 	width: 800px;*/
 }
 #vis3 {
-    left: 200px;
-	right: 200px;
+    left: 100px;
+	right: 100px;
 	/*height: 1000px;
 	width: 800px;*/
 }
@@ -31,8 +31,8 @@ body {
 	width: 800px;*/
 }
 #vis5 {
-    left: 200px;
-	right: 200px;
+    left: 100px;
+	right: 100px;
 	/*height: 1000px;
 	width: 800px;*/
 }
@@ -47,7 +47,7 @@ body {
 
 #text1 {
     text-align: center;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-right: 200px;
 }
 #text2 {
@@ -58,7 +58,7 @@ body {
 }
 #text3 {
     text-align: center;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-right: 200px;
 }
 #text4 {

@@ -19,9 +19,13 @@
         "legend": {"orient": "top", "titleOrient": "left"},
         "scale": {
             "domain": ["Harvard University", "Massachusetts Institute of Technology", "Stanford University", "University of Cambridge", "University of Oxford"],
-            "range": ["black", "green", "blue", "#FF9900", "#e41a1c"]
+            "range": ["#675193", "green", "blue", "#FF9900", "#e41a1c"]
         }
-    }
+    },
+    "tooltip": [
+      {"field": "school", "type": "nominal", "title": "Country"},
+      {"field": "number", "type": "quantitative","title":"number of student"}
+    ]
   },
   "config": {
     "background":"#F3FAF9"}

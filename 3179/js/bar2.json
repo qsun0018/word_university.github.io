@@ -12,7 +12,8 @@
     },
     "encoding": {
       "y": {"field": "school", "type": "nominal"},
-      "x": {"field": "percentage", "type": "quantitative", "scale": {"domain": [0, 50]}}
+      "x": {"field": "percentage", "type": "quantitative", "scale": {"domain": [0, 50]}},
+      "color": {"value":"#ca8861"}
       
     },
     "layer": [{

@@ -1,0 +1,84 @@
+html,
+body {
+    background-color: #F3FAF9;
+}
+
+.pure-u-1 img {
+    width: 110vw;
+}
+#vis1 {
+	left: 200px;
+	right: 200px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+#vis2 {
+    left: 200px;
+	right: 200px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+#vis3 {
+    left: 200px;
+	right: 200px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+#vis4 {
+    left: 200px;
+	right: 200px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+#vis5 {
+    left: 200px;
+	right: 200px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+#vis6 {
+    left: 200px;
+	right: 200px;
+	/*height: 1000px;
+	width: 800px;*/
+}
+
+
+
+#text1 {
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#text2 {
+    font-size: 50px;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#text3 {
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+#text4 {
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+h1 {
+    text-align: center;
+    color: #527298;
+    font-size: 40px;
+}
+
+p {
+    color: #527298;
+    font-size: 20px;
+}
+
+#bar_chart {
+    width: 90%;
+    height: 90%
+}

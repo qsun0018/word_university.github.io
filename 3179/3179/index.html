@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>world university rankings</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+
+    <link rel="stylesheet" href="css/web.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="js/vega_lite_vis.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="pure-g">
+        <div class="pure-u-1">
+            <img src="images/top1.png" />
+        </div>
+        <div class="pure-u-1-2">
+            <h1>TOP 1000 university</h1>
+            <div id="vis1", class="choropleth_map"></div>
+
+
+            <script type="text/javascript">
+              var spec1 = "js/map2.json";
+              vegaEmbed('#vis1', spec1).then(function(result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+              }).catch(console.error);
+            </script>
+        </div>
+        <div class="pure-u-1-2">
+            <h1>TOP 100 University</h1>
+            <div id="vis2", class="choropleth_map"></div>
+
+
+            <script type="text/javascript">
+              var spec2 = "js/map.json";
+              vegaEmbed('#vis2', spec2).then(function(result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+              }).catch(console.error);
+            </script>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="text1", class="text_div">
+                
+                <p>The United States, China and Japan occupy the top three places in the world's top 1,000 universities, with the United States accounting for 229 which is more than 20%. Canada, France, Germany, Italy, South Korea, Spain and the UK also have more than 30 universities in the world's university top 1,000 rankings. From the distribution of the map, only a small number of universities from Africa in the list, with the majority in Asia, Europe and North America.
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="text2", class="text_div">
+
+                <p>The United States, the United Kingdom and Japan occupy the top three places in the list of the world's top100 universities, with the United States accounting for more than 50 universities which represent that more than half of the world's top100 universities are in the United States. Comparing Visualisation from 2012 to 2015, we can see that according to the time of decommissioning, more countries appear in the world's top 100 universities, including from China, Russia, Singapore and others, while some European countries will disappear from the list.
+            </div>
+        </div>
+        
+        <div class="pure-u-1-2">
+            <h1>TOP 5 university</h1>
+            <div id="vis3", class="vis-container"></div>
+            <script type="text/javascript">
+                var spec3 = "js/line.json";
+                vegaEmbed('#vis3', spec3).then(function(result) {
+                  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                }).catch(console.error);
+              </script>
+        </div>
+        <div class="pure-u-1-2">
+            <h1>Number of students at the TOP 5 university</h1>
+            <div id="vis4", class="vis-container"></div>
+            <script type="text/javascript">
+                var spec4 = "js/bar.json";
+                vegaEmbed('#vis4', spec4).then(function(result) {
+                  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                }).catch(console.error);
+              </script>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="text3", class="text_div">
+                <p>From 2012 to 2015, Havered University has been the world's top one ranked university, with the following universities ranked second to fifth: Stanford University, Massachusetts Institute of Technology, University of Cambridge and University of Oxford. Three of these universities are from the US and the other two are from the UK. By 2015, the three universities from the USA have largely stabilised in the top three in the world.
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="text4", class="text_div">
+                <p>Of the top five universities in the world, Harvard has the largest number of students, over 20,000, while Massachusetts Institute of Technology has the smallest number of students. Most of the universities have between 1w and 2w students, and the UK has a more stable student population than the top three American universities.
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <h1>International student percentage</h1>
+            <div id="vis5", class="vis-container"></div>
+            <script type="text/javascript">
+                var spec5 = "js/bar2.json";
+                vegaEmbed('#vis5', spec5).then(function(result) {
+                  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                }).catch(console.error);
+              </script>
+        </div>
+        <div class="pure-u-1-2">
+            <h1>Student Staff Ratio</h1>
+            <div id="vis6", class="vis-container"></div>
+            <script type="text/javascript">
+                var spec6 = "js/bar3.json";
+                vegaEmbed('#vis6', spec6).then(function(result) {
+                  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                }).catch(console.error);
+              </script>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="text3", class="text_div">
+                <p>Of the top five ranked universities in the world in 2015, Harvard and Stanford had less than 25% of international students, with the remaining three universities all above 30%. US universities have a relatively low share of international students, while the UK has a relatively stable share of international students, with both top two universities at 34%.
+            </div>
+        </div>
+        <div class="pure-u-1-2">
+            <div id="text4", class="text_div">
+                <p>Among the top five universities in the world, American universities are responsible for fewer than 10 students per teacher, while UK teachers are responsible for 11, which also affects the rankings.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
